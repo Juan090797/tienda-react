@@ -1,24 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import Categorie from './pages/Categorie';
+import Footer from './components/sections/Footer';
+import Header from './components/sections/Header';
+import Home from './pages/Home';
+import Product from './pages/Product';
 
 function App() {
+  const company = {
+    nombre: 'GrupoMarquina',
+    premio: 'Categoria Prueba'
+  };
+
+  const credits = {
+    year: new Date().getFullYear(),
+    pagina: 'GrupoMarquina.pe'
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header company={company}/>
+      <main className="container">
+        <Home />
+        <Categorie />
+        <Product /> 
+      </main>
+      <Footer credits={credits}/>
+    </>
+       
   );
 }
 
