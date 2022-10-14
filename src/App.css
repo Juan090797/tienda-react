@@ -4,6 +4,29 @@
     min-height: 100vh;
 }
 
-.h2.span{
-    margin-top: 10 rem;
+h3.titulo__prueba{
+    color: aqua;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+h3.titulo__prueba:hover{
+    color: red;
+}
+
+a.titulo__producto{
+    text-decoration:none;
+}
+
+img.img__categorie{
+    transition: transform .2s;
+}
+
+img.img__categorie:hover{
+    transform: scale(1.05);
+}
+
+.carousel#carouselExampleControls{
+    height: 100%;
 }

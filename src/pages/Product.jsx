@@ -1,15 +1,16 @@
 const Product = () => {
     return ( 
         <>          
+            <h3 className="mt-4 mb-4 titulo__prueba">PRODUCTOS MAS VENDIDOS</h3>
             <section>
                 <div className="text-center container py-3">
-                    <h3 className="mt-4 mb-5"><strong>PRODUCTOS MAS VENDIDOS</strong></h3>
+                    
 
                     <div className="row">
-                        <div className="col-lg-3 col-md-6 mb-4">
+                        <div className="col-lg-3 col-md-6 col-6 mb-4">
                             <div className="card">
                                 <div className="bg-image hover-zoom ripple ripple-surface ripple-surface-light" data-mdb-ripple-color="light">
-                                    <img src="https://coolboxpe.vtexassets.com/arquivos/ids/179500-500-auto?v=637484858929630000&width=500&height=auto&aspect=true" className="w-100" />
+                                    <img src="https://coolboxpe.vtexassets.com/arquivos/ids/179500-500-auto?v=637484858929630000&width=500&height=auto&aspect=true" className="w-100" alt="..."/>
                                     <a href="#!">
                                         <div className="mask">
                                             <div className="d-flex justify-content-start align-items-end h-100">
@@ -22,7 +23,7 @@ const Product = () => {
                                     </a>
                                 </div>
                                 <div className="card-body">
-                                    <a href="/" className="text-reset">
+                                    <a href="/" className="text-reset titulo__producto">
                                         <h5 className="card-title mb-3">Cámara web Jetion</h5>
                                     </a>
                                     <a href="/" className="text-reset">
@@ -33,10 +34,10 @@ const Product = () => {
                             </div>
                         </div>
 
-                        <div className="col-lg-3 col-md-6 mb-4">
+                        <div className="col-lg-3 col-md-6 col-6 mb-4">
                             <div className="card">
                                 <div className="bg-image hover-zoom ripple ripple-surface ripple-surface-light" data-mdb-ripple-color="light">
-                                    <img src="https://coolboxpe.vtexassets.com/arquivos/ids/178831-500-auto?v=637478186687400000&width=500&height=auto&aspect=true" className="w-100" />
+                                    <img src="https://coolboxpe.vtexassets.com/arquivos/ids/178831-500-auto?v=637478186687400000&width=500&height=auto&aspect=true" className="w-100" alt="..." />
                                     <a href="#!">
                                         <div className="mask">
                                             <div className="d-flex justify-content-start align-items-end h-100">
@@ -49,7 +50,7 @@ const Product = () => {
                                     </a>
                                 </div>
                                 <div className="card-body">
-                                    <a href="/" className="text-reset">
+                                    <a href="/" className="text-reset titulo__producto">
                                         <h5 className="card-title mb-3">Cooler para laptop</h5>
                                     </a>
                                     <a href="/" className="text-reset">
@@ -60,11 +61,11 @@ const Product = () => {
                             </div>
                         </div>
 
-                        <div className="col-lg-3 col-md-6 mb-4">
+                        <div className="col-lg-3 col-md-6 col-6 mb-4">
                             <div className="card">
                                 <div className="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
                                     data-mdb-ripple-color="light">
-                                    <img src="https://coolboxpe.vtexassets.com/arquivos/ids/205241-500-auto?v=637801939147870000&width=500&height=auto&aspect=true" className="w-100" />
+                                    <img src="https://coolboxpe.vtexassets.com/arquivos/ids/205241-500-auto?v=637801939147870000&width=500&height=auto&aspect=true" className="w-100" alt="..."/>
                                     <a href="#!">
                                         <div className="mask">
                                             <div className="d-flex justify-content-start align-items-end h-100">
@@ -77,7 +78,7 @@ const Product = () => {
                                     </a>
                                 </div>
                                 <div className="card-body">
-                                    <a href="/" className="text-reset">
+                                    <a href="/" className="text-reset titulo__producto">
                                         <h5 className="card-title mb-3">Redmin 11</h5>
                                     </a>
                                     <a href="/" className="text-reset">
@@ -88,10 +89,10 @@ const Product = () => {
                             </div>
                         </div>
 
-                        <div className="col-lg-3 col-md-6 mb-4">
+                        <div className="col-lg-3 col-md-6 col-6 mb-4">
                             <div className="card">
                                 <div className="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
-                                    <img src="https://coolboxpe.vtexassets.com/arquivos/ids/167312-500-auto?v=637305357437030000&width=500&height=auto&aspect=true" className="w-100" />
+                                    <img src="https://coolboxpe.vtexassets.com/arquivos/ids/167312-500-auto?v=637305357437030000&width=500&height=auto&aspect=true" className="w-100" alt="..."/>
                                     <a href="#!">
                                         <div className="mask">
                                             <div className="d-flex justify-content-start align-items-end h-100">
@@ -104,7 +105,7 @@ const Product = () => {
                                     </a>
                                 </div>
                                 <div className="card-body">
-                                    <a href="/" className="text-reset">
+                                    <a href="/" className="text-reset titulo__producto">
                                         <h5 className="card-title mb-3">Chromecast</h5>
                                     </a>
                                     <a href="/" className="text-reset">
