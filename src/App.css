@@ -5,7 +5,8 @@
 }
 
 h3.titulo__prueba{
-    color: aqua;
+    font-weight: bold;
+    color: red;
     text-align: center;
     display: flex;
     justify-content: center;
