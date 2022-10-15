@@ -34,11 +34,28 @@ export const pruebaApi = createAsyncThunk(
     }
   );
 
+  export const fetchCategorie = createAsyncThunk(
+    'home/fetchCategorie',
+    async (arg, { rejectWithValue }) => {
+      try {
+        const options = {
+          method: 'GET',
+          url: `https://grupomarquina.pe/api/categorias`
+        };
+        const { data } = await axios(options);
+        return data;
+      } catch (error) {
+        return rejectWithValue(error.response.data.error);
+      }
+    }
+  );
+
 const initialState = {
   loading: false,
   error: {},
   heroProducts: [],
   products: [],
+  categories: [],
 };
 
 export const homeSlice = createSlice({
@@ -71,6 +88,19 @@ export const homeSlice = createSlice({
       state.loading = false;
       state.error = payload;
       state.products = [];
+    });
+    builder.addCase(fetchCategorie.pending, (state) => {
+      state.loading = true;
+    });
+    builder.addCase(fetchCategorie.fulfilled, (state, { payload }) => {
+      state.loading = false;
+      state.error = {};
+      state.categories = payload;
+    });
+    builder.addCase(fetchCategorie.rejected, (state, { payload }) => {
+      state.loading = false;
+      state.error = payload;
+      state.categories = [];
     });
   }
 });
