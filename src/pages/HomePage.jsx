@@ -10,9 +10,10 @@ const HomePage = () => {
     const dispatch = useDispatch();
     const { heroProducts, products, categories} = useHome();
     useEffect(() => {
-        dispatch(fetchReadHero());// eslint-disable-next-line react-hooks/exhaustive-deps
-        dispatch(pruebaApi());// eslint-disable-next-line react-hooks/exhaustive-deps
-        dispatch(fetchCategorie());// eslint-disable-next-line react-hooks/exhaustive-deps
+        dispatch(fetchReadHero());
+        dispatch(pruebaApi());
+        dispatch(fetchCategorie());
+        // eslint-disable-next-line react-hooks/exhaustive-deps
       }, []);
 
     return (  

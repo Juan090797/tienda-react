@@ -9,6 +9,7 @@ const Footer = () => {
     const { data } = useFooter();
     useEffect(() => {
       dispatch(fetchReadFooter());
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return ( 
