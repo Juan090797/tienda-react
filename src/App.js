@@ -1,32 +1,25 @@
+import { Provider } from 'react-redux';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Categorie from './pages/Categorie';
-import Footer from './components/sections/Footer';
-import Header from './components/sections/Header';
-import Home from './pages/Home';
-import Product from './pages/Product';
+import PrimaryLayout from './layouts/PrimaryLayout';
+import HomePage from './pages/HomePage';
+import { store } from './redux/store';
+
 
 function App() {
-  const company = {
-    nombre: 'GrupoMarquina',
-    premio: 'Categoria Prueba'
-  };
-
-  const credits = {
-    year: new Date().getFullYear(),
-    pagina: 'GrupoMarquina.pe'
-  };
+  
 
   return (
-    <>
-      <Header company={company}/>
-      <main className="container">
-        <Home />
-        <Categorie />
-        <Product /> 
-      </main>
-      <Footer credits={credits}/>
-    </>
-       
+    <Provider store={store}>
+      <Routes>
+        <Route path='/' element={ <PrimaryLayout />}>
+          <Route path='productos' element={<h1>Productos</h1>} />
+          <Route path='categorias' element={<h1>Categorias</h1>} />
+          <Route path='nosotros' element={<h1>Nosotros</h1>} />
+          <Route index element={<HomePage />} />
+        </Route>
+      </Routes>
+    </Provider>
   );
 }
 

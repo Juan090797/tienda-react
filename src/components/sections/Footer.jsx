@@ -1,12 +1,24 @@
-const Footer = ({ credits }) => {
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { fetchReadFooter } from "../../redux/slices/footer.Slice";
+import useFooter from "../../hook/useFooter";
+import { FaStarOfLife } from 'react-icons/fa';
 
-    const {year, pagina} = credits;
+const Footer = () => {
+    const dispatch = useDispatch();
+    const { data } = useFooter();
+    useEffect(() => {
+      dispatch(fetchReadFooter());
+    }, []);
 
     return ( 
         <footer className="mt-auto py-3 bg-dark text-center text-lg-start text-light">
             <div className="text-center p-3">
-                © {year} Copyright - 
-                <a className="text-light" href="https://grupomarquina.pe/"> {pagina} </a>
+                © 2022 Copyright - 
+                <a className="text-light" href="https://grupomarquina.pe/"> GrupoMarquina</a>-<FaStarOfLife />
+                <ul>
+                    <li>Direccion: {data.data?.attributes.componetes[0].direccion}</li>
+                </ul>
             </div>
         </footer>
      );

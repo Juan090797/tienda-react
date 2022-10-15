@@ -25,9 +25,22 @@ img.img__categorie{
 }
 
 img.img__categorie:hover{
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
-.carousel#carouselExampleControls{
-    height: 100%;
+div.card__product{
+    transition: transform .2s;
 }
+
+div.card__product:hover{
+    border-width: 2px;
+    border-color: red;
+}
+
+.section--hero {
+ position: relative;
+ min-height: 28vh;
+ background-size: cover;
+ background-position: center;
+}
+
