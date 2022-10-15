@@ -1,4 +1,3 @@
-
 const HomeSlider = ({ heroProducts }) => {
     return ( 
         <>

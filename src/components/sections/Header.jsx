@@ -1,4 +1,3 @@
-
 const Header = ({ company,categories}) => {
     
     const {nombre} = company;

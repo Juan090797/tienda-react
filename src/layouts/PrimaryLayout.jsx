@@ -14,6 +14,7 @@ const PrimaryLayout = () => {
       };
 
       const { categories} = useHome();
+      console.log(categories);
       useEffect(() => {
         dispatch(fetchCategorie());
         // eslint-disable-next-line react-hooks/exhaustive-deps
