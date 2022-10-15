@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axiosInstance from '../../config/axiosInstance';
+import axios from 'axios';
 
 export const fetchReadFooter = createAsyncThunk(
     'footer/fetchReadFooter',
@@ -7,9 +7,9 @@ export const fetchReadFooter = createAsyncThunk(
       try {
         const options = {
           method: 'GET',
-          url: '/contacto?populate=*'
+          url: 'https://eakon.herokuapp.com/api/contacto?populate=*'
         };
-        const { data } = await axiosInstance(options);
+        const { data } = await axios(options);
         return data;
       } catch (error) {
         return rejectWithValue(error.response.data.error);
