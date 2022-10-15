@@ -19,7 +19,7 @@ function App() {
             <Route index element={<h1>PRODUCTOS</h1>} />
           </Route>
           <Route path="categorias" element={<h1>Categorias</h1>} />
-          <Route path="nosotros" element={<h1>Nosotros</h1>} />
+          <Route path="contactanos" element={<h1>Contactanos</h1>} />
           <Route index element={<HomePage />} />
         </Route>
       </Routes>

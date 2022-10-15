@@ -1,6 +1,8 @@
+import useHome from "../../hook/useHome";
 const Header = ({ company }) => {
     
     const {nombre} = company;
+    const { categories} = useHome();
 
     return ( 
         <section>
@@ -15,14 +17,21 @@ const Header = ({ company }) => {
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" href="/">Inicio</a>
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="/">Categorias</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Categorias
+                                </a>
+                                <ul class="dropdown-menu">
+                                {categories.map( (element) => {
+                                    const { title } = element;
+                                    return (
+                                        <li key={element.id}><a class="dropdown-item" href="/">{title}</a></li>
+                                    );
+                                })}
+                                </ul>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/">Categorias</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="/">Nosotros</a>
+                                <a className="nav-link" href="/contactanos">Contactanos</a>
                             </li>
                         </ul>
                     </div>
