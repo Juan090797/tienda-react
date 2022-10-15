@@ -25,7 +25,15 @@ img.img__categorie{
 }
 
 img.img__categorie:hover{
-    transform: scale(1.05);
+    transform: scale(1.02);
+}
+
+div.card_categorie{
+    transition: transform .2s;
+}
+
+div.card_categorie:hover{
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
 div.card__product{
@@ -35,6 +43,7 @@ div.card__product{
 div.card__product:hover{
     border-width: 2px;
     border-color: red;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
 .section--hero {
@@ -43,5 +52,14 @@ div.card__product:hover{
  min-height: 28vh;
  background-size: cover;
  background-position: center;
+}
+
+.link__product{
+    text-decoration: none;
+    color: black;
+}
+
+.texto__footer{
+    text-decoration: none;
 }
 

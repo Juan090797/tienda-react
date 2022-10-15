@@ -1,6 +1,6 @@
 const Header = ({ company }) => {
     
-    const {nombre,premio} = company;
+    const {nombre} = company;
 
     return ( 
         <section>
@@ -16,7 +16,7 @@ const Header = ({ company }) => {
                                 <a className="nav-link active" aria-current="page" href="/">Inicio</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/">{premio}</a>
+                                <a className="nav-link" href="/">Categorias</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="/">Categorias</a>

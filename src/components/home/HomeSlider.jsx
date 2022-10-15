@@ -1,30 +1,31 @@
-import { Navigation, Pagination, A11y, Autoplay } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
-
 
 const HomeSlider = ({ heroProducts }) => {
     return ( 
-        <Swiper
-            tag='section'
-            className='hero-slider'
-            modules={[A11y, Autoplay, Navigation, Pagination]}
-            autoplay={{ delay: 5000 }}
-            loop
-            navigation
-            pagination={{ clickable: true }}
-        >
-            {heroProducts.map((element) => {
-                const { link_foto} = element;
-                return (
-                    <SwiperSlide
-                        key={element.id}
-                        tag='section'
-                        className="section section--hero"
-                        style={{backgroundImage: `url(${link_foto})`}}>
-                    </SwiperSlide>
-                );
-            })}
-        </Swiper >
+        <>
+            <section className="py-3">
+                <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+                    <div className="carousel-inner rounded-1">
+                    {heroProducts.map((element) => {
+                        const { link_foto } = element;
+                        return (
+                            <div key={element.id} className="carousel-item active">
+                                <img src={link_foto} className="d-block w-100" alt="..." />
+                            </div>
+                        );
+                    })}
+                    </div>
+                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Previous</span>
+                    </button>
+                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+        </>
+        
     );
 }
  

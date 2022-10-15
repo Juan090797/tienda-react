@@ -1,4 +1,7 @@
+import { Link } from 'react-router-dom';
+
 const ListProduct = ({products}) => {
+    
     return ( 
         <>          
             <section>
@@ -6,7 +9,7 @@ const ListProduct = ({products}) => {
                 <div className="text-center container py-3">
                     <div className="row">
                         {products.map( (element) => {
-                            const { title, precio, link_foto } = element;
+                            const { title, precio_new, link_foto,descuento,precio_old,slug } = element;
                             return (
                                 <div key={element.id} className="col-lg-3 col-md-6 col-6 mb-4">
                                     <div className="card card__product">
@@ -15,7 +18,7 @@ const ListProduct = ({products}) => {
                                             <a href="/">
                                                 <div className="mask">
                                                     <div className="d-flex justify-content-start align-items-end h-100">
-                                                        <h5><span className="badge bg-primary ms-2">New</span></h5>
+                                                        <h5><span className="badge bg-danger ms-2">-{descuento}%</span></h5>
                                                     </div>
                                                 </div>
                                                 <div className="hover-overlay">
@@ -24,11 +27,11 @@ const ListProduct = ({products}) => {
                                             </a>
                                         </div>
                                         <div className="card-body">
-                                            <a href="/" className="text-reset titulo__producto">
-                                                <h5 className="card-title mb-3">{title}</h5>
-                                            </a>
+                                            <span href="/" className="text-reset titulo__producto">
+                                                <Link to={`/productos/${slug}`} className="h5 card-title mb-3 link__product">{title}</Link>
+                                            </span>
                                             <h6 className="text-danger">Precio Exclusivo Web</h6>
-                                            <h6 className="mb-3">{precio.toLocaleString('es-PE', { style: 'currency', currency: 'PEN', minimumFractionDigits: 2 })}</h6>
+                                            <h6 className="mb-3"><del className='text-secondary'>{precio_old.toLocaleString('es-PE', { style: 'currency', currency: 'PEN', minimumFractionDigits: 2 })}</del> {precio_new.toLocaleString('es-PE', { style: 'currency', currency: 'PEN', minimumFractionDigits: 2 })}</h6>
                                         </div>
                                     </div>
                                 </div>
