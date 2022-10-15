@@ -1,3 +1,4 @@
+
 const Contacto = () => {
     return ( 
         <>
@@ -5,8 +6,8 @@ const Contacto = () => {
                 <div className="contact-image">
                     <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact" />
                 </div>
-                    <h3>Contactanos</h3>
-                    <div className="row">
+                <h3>Contactanos</h3>
+                <div className="row">
                         <div className="col-md-6">
                             <div className="form-group mb-4">
                                 <input type="text" name="txtName" className="form-control" placeholder="Tu nombre *" />
@@ -26,7 +27,7 @@ const Contacto = () => {
                                 <textarea name="txtMsg" className="form-control" placeholder="Mensaje *"></textarea>
                             </div>
                         </div>
-                    </div>
+                </div>         
             </div>
         </>
      );
