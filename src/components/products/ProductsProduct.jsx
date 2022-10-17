@@ -1,4 +1,5 @@
 import { BsFillStarFill} from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const ProductsProduct = ({ product }) => {
     const { title, precio_new, link_foto, marca, precio_old,descripcion,categoria } = product;
@@ -44,7 +45,7 @@ const ProductsProduct = ({ product }) => {
                                 <a href={`https://api.whatsapp.com/send?phone=51999955878&text=Deseo%20comprar el producto ${title}, marca: ${marca} al precio de ${precio_new.toLocaleString('es-PE', { style: 'currency', currency: 'PEN', minimumFractionDigits: 2 })}`} className="btn btn-primary btn-sm py-2 border-bottom-0 px-5 me-3">Hacer pedido</a>
                             </div>
                             <div className="d-flex align-items-center mb-4">
-                                <a href="/" className="btn btn-success btn-sm py-2 border-bottom-0 px-5 me-3">Atras</a>
+                                <Link to="/" className="btn btn-success btn-sm py-2 border-bottom-0 px-5 me-3">Atras</Link>
                             </div>
                             
                         </div>
