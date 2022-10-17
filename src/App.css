@@ -115,3 +115,16 @@ div.card__product:hover{
     text-decoration: none;
     text-align: center;
 }
+div.cont__produc_det{
+    overflow: hidden;
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.80);
+
+}
+
+div.producto__detalle{
+    transition: transform .2s; 
+    object-fit: cover;
+}
+div.producto__detalle:hover{
+    transform: scale(1.1); 
+}

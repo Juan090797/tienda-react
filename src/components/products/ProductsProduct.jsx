@@ -12,12 +12,12 @@ const ProductsProduct = ({ product }) => {
             <section className="my-5">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-6 mb-5 mb-lg-0">
-                            <div className="row">
+                        <div className="col-lg-6 mb-5 mb-lg-0 cont__produc_det">
+                            <div className="row producto__detalle">
                                 <img src={link_foto} className="card-img-top" alt="producto" />
                             </div>
                         </div>
-
+                        
                         <div className="col-lg-6">
                             <div className="badge bg-info small rounded-0 mb-2 mr-4">{marca}</div>
                             <div className="badge bg-danger small rounded-0 mb-2">{categoria['title']}</div>
@@ -33,6 +33,7 @@ const ProductsProduct = ({ product }) => {
                                 <p className="small text-muted mb-2">12 Opiniones de los usuarios</p>
                             </div>
                             <h4><del className='text-secondary'>{precio_old.toLocaleString('es-PE', { style: 'currency', currency: 'PEN', minimumFractionDigits: 2 })}</del> <p className="text-danger">{precio_new.toLocaleString('es-PE', { style: 'currency', currency: 'PEN', minimumFractionDigits: 2 })}</p></h4>
+                            <h5>Caracteristicas</h5>
                             <ul>
                                 {arranew().map((element) => {
                                     return (element) ? <li key={element} >{element}</li> : ''
