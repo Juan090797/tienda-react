@@ -15,19 +15,17 @@ const ListProduct = ({products}) => {
                                     <div className="card card__product">
                                         <div className="bg-image hover-zoom ripple ripple-surface ripple-surface-light" data-mdb-ripple-color="light">
                                             <img src={link_foto} className="w-100 img__product" alt="..." />
-                                            <a href="/">
-                                                <div className="mask">
-                                                    <div className="d-flex justify-content-start align-items-end h-100">
-                                                        <h5><span className="badge bg-danger ms-2">-{descuento}%</span></h5>
-                                                    </div>
+                                            <div className="mask">
+                                                <div className="d-flex justify-content-start align-items-end h-100">
+                                                    <h5><span className="badge bg-danger ms-2">-{descuento}%</span></h5>
                                                 </div>
-                                                <div className="hover-overlay">
-                                                    <div className="mask"></div>
-                                                </div>
-                                            </a>
+                                            </div>
+                                            <div className="hover-overlay">
+                                                <div className="mask"></div>
+                                            </div>
                                         </div>
                                         <div className="card-body">
-                                            <span href="/" className="text-reset titulo__producto">
+                                            <span className="text-reset titulo__producto">
                                                 <Link to={`/productos/${slug}`} className="h5 card-title mb-3 link__product">{title}</Link>
                                             </span>
                                             <h6 className="text-danger">Precio Exclusivo Web</h6>
